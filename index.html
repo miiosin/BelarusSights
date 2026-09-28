@@ -3,155 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BelarusSights — Путеводитель по Беларуси</title>
-  
-  <!-- Подключение стилей Leaflet -->
+  <title>BelarusSights — Достопримечательности Беларуси</title>
+
+  <!-- 1. Стили Leaflet (обязательно ДО style.css) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script> 
-  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ШАПКА -->
+  <!-- Липкая шапка: логотип, поиск, фильтры -->
   <header>
-    <div class="logo">🧭 BelarusSights</div>
-    
+    <div class="logo">BelarusSights</div>
+
     <div class="search-box">
-      <input type="text" placeholder="Поиск по названию или городу...">
+      <input type="text" id="search-input" placeholder="Поиск достопримечательностей...">
     </div>
 
     <div class="filters">
-      <select>
-        <option value="">Все области</option>
-        <option>Гродненская</option>
-        <option>Минская</option>
-        <option>Брестская</option>
-        <option>Витебская</option>
-        <option>Гомельская</option>
-        <option>Могилевская</option>
+      <select id="region-filter">
+        <option value="all">Все области</option>
+        <option value="Брестская">Брестская</option>
+        <option value="Витебская">Витебская</option>
+        <option value="Гомельская">Гомельская</option>
+        <option value="Гродненская">Гродненская</option>
+        <option value="Минская">Минская</option>
+        <option value="Могилевская">Могилевская</option>
       </select>
 
-      <select>
-        <option value="">Все категории</option>
-        <option>Замки и дворцы</option>
-        <option>Храмы и костелы</option>
-        <option>Усадьбы</option>
-        <option>Природа</option>
+      <select id="category-filter">
+        <option value="all">Все категории</option>
+        <option value="Замки">Замки и дворцы</option>
+        <option value="Храмы">Храмы и костелы</option>
+        <option value="Природа">Природа</option>
       </select>
     </div>
   </header>
 
-  <!-- 1. КАРТА НА ВЕСЬ ЭКРАН -->
+  <!-- Блок карты на всю ширину -->
   <div id="map-container">
     <div id="map"></div>
   </div>
 
-  <!-- 2. СНИЗУ КАТАЛОГ (ЛИСТАЕТСЯ ВМЕСТЕ С СТРАНИЦЕЙ) -->
-  <main id="catalog-container">
-    <h1 class="catalog-title">Все достопримечательности</h1>
-    
-    <div class="grid">
-      
-      <!-- Карточка 1 -->
-      <article class="card">
-        <img class="card-img" src="https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=600&q=80" alt="Мирский замок">
-        <div class="card-body">
-          <div class="tags">
-            <span class="tag">Замки</span>
-            <span class="tag">ЮНЕСКО</span>
-          </div>
-          <h2 class="card-title">Мирский замок</h2>
-          <div class="card-region">Гродненская обл., п. Мир</div>
-          <p class="card-desc">Выдающийся оборонительный замок XVI века, сочетающий стили готики, ренессанса и барокко.</p>
-          <div class="card-actions">
-            <button class="btn btn-secondary">Подробнее</button>
-            <button class="btn btn-primary" onclick="scrollToMap(53.4512, 26.4731)">На карте</button>
-          </div>
-        </div>
-      </article>
+  <!-- Каталог карточек -->
+  <section id="catalog-container">
+    <h2 class="catalog-title">Достопримечательности</h2>
+    <div class="grid" id="grid"></div>
+  </section>
 
-      <!-- Карточка 2 -->
-      <article class="card">
-        <img class="card-img" src="https://images.unsplash.com/photo-1548625149-fc4a29cf7092?auto=format&fit=crop&w=600&q=80" alt="Несвижский замок">
-        <div class="card-body">
-          <div class="tags">
-            <span class="tag">Замки</span>
-            <span class="tag">Дворцы</span>
-          </div>
-          <h2 class="card-title">Несвижский замок</h2>
-          <div class="card-region">Минская обл., г. Несвиж</div>
-          <p class="card-desc">Дворцово-парковый ансамбль Радзивиллов с богатой историей, красивым прудом и легендами.</p>
-          <div class="card-actions">
-            <button class="btn btn-secondary">Подробнее</button>
-            <button class="btn btn-primary" onclick="scrollToMap(53.2228, 26.6917)">На карте</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Карточка 3 -->
-      <article class="card">
-        <img class="card-img" src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&q=80" alt="Гервяты">
-        <div class="card-body">
-          <div class="tags">
-            <span class="tag">Храмы</span>
-            <span class="tag">Костелы</span>
-          </div>
-          <h2 class="card-title">Костел Святой Троицы</h2>
-          <div class="card-region">Гродненская обл., д. Гервяты</div>
-          <p class="card-desc">Один из самых высоких и красивых неоготических храмов Беларуси с великолепным дендропарком.</p>
-          <div class="card-actions">
-            <button class="btn btn-secondary">Подробнее</button>
-            <button class="btn btn-primary" onclick="scrollToMap(54.6869, 26.1438)">На карте</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Карточка 4 -->
-      <article class="card">
-        <img class="card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Браславские озера">
-        <div class="card-body">
-          <div class="tags">
-            <span class="tag">Природа</span>
-            <span class="tag">Озера</span>
-          </div>
-          <h2 class="card-title">Браславские озёра</h2>
-          <div class="card-region">Витебская обл., г. Браслав</div>
-          <p class="card-desc">Национальный парк с десятками живописных озёр, уникальным рельефом и смотровыми площадками.</p>
-          <div class="card-actions">
-            <button class="btn btn-secondary">Подробнее</button>
-            <button class="btn btn-primary" onclick="scrollToMap(55.6386, 27.0425)">На карте</button>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </main>
-
-  <!-- Подключение JS карты Leaflet -->
+  <!-- Скрипты -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    // Инициализация карты
-    const map = L.map('map').setView([53.9, 27.56], 7);
+  <script src="data.js"></script>
+  <script src="map.js"></script>
+  <script src="script.js"></script>
 
-    // Замена сервера карт на CartoDB (исправляет ошибку 403 и не требует ключей)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      attribution: '© OpenStreetMap © CARTO',
-      subdomains: 'abcd',
-      maxZoom: 19
-    }).addTo(map);
-
-    // Добавление меток
-    L.marker([53.4512, 26.4731]).addTo(map).bindPopup('Мирский замок');
-    L.marker([53.2228, 26.6917]).addTo(map).bindPopup('Несвижский замок');
-    L.marker([54.6869, 26.1438]).addTo(map).bindPopup('Костел в Гервятах');
-    L.marker([55.6386, 27.0425]).addTo(map).bindPopup('Браславские озёра');
-
-    // Функция: при клике на "На карте" страница плавно скроллится наверх к карте, и она центрируется на объекте
-    function scrollToMap(lat, lng) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      map.flyTo([lat, lng], 12);
-    }
-  </script>
 </body>
 </html>

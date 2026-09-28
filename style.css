@@ -1,191 +1,191 @@
 * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
 
-    /* Включаем обычную прокрутку всей страницы */
-    html, body {
-      min-height: 100vh;
-      background-color: #f4f6f8;
-      color: #1a1a1a;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
+/* Включаем прокрутку всей страницы */
+html, body {
+  min-height: 100vh;
+  background-color: #f4f6f8;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
-    /* Липкая шапка сверху */
-    header {
-      position: sticky;
-      top: 0;
-      background: #ffffff;
-      padding: 12px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #e5e7eb;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
+/* Липкая шапка сверху */
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      color: #0f766e;
-    }
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f766e;
+}
 
-    .search-box input {
-      padding: 8px 16px;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      width: 260px;
-      outline: none;
-      font-size: 14px;
-    }
+.search-box input {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  width: 260px;
+  outline: none;
+  font-size: 14px;
+}
 
-    .filters {
-      display: flex;
-      gap: 12px;
-    }
+.filters {
+  display: flex;
+  gap: 12px;
+}
 
-    .filters select {
-      padding: 8px 12px;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      background: #fff;
-      font-size: 14px;
-      cursor: pointer;
-    }
+.filters select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-    /* 1. Блок карты во всю высоту экрана minus шапка */
-    #map-container {
-      width: 100%;
-      height: calc(100vh - 61px); /* 100% высоты экрана за вычетом шапки */
-      position: relative;
-    }
+/* 1. Блок карты */
+#map-container {
+  width: 100%;
+  height: calc(100vh - 61px);
+  position: relative;
+}
 
-    #map {
-      width: 100%;
-      height: 100%;
-    }
+#map {
+  width: 100%;
+  height: 100%;
+}
 
-    /* 2. Нижний блок — Каталог мест (идет сразу за картой) */
-    #catalog-container {
-      padding: 40px 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+/* 2. Нижний блок — Каталог мест */
+#catalog-container {
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .catalog-title {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 24px;
-      color: #374151;
-    }
+.catalog-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #374151;
+}
 
-    /* Сетка карточек */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-    }
+/* Сетка карточек */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
 
-    /* Дизайн карточки */
-    .card {
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
+/* Дизайн карточки */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
 
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
-    .card-body {
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
-    .tags {
-      display: flex;
-      gap: 6px;
-      margin-bottom: 8px;
-    }
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
 
-    .tag {
-      background: #e6f4f1;
-      color: #0f766e;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
+.tag {
+  background: #e6f4f1;
+  color: #0f766e;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
 
-    .card-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
 
-    .card-region {
-      font-size: 13px;
-      color: #6b7280;
-      margin-bottom: 10px;
-    }
+.card-region {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
 
-    .card-desc {
-      font-size: 14px;
-      color: #4b5563;
-      line-height: 1.4;
-      margin-bottom: 16px;
-      flex-grow: 1;
-    }
+.card-desc {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
 
-    .card-actions {
-      display: flex;
-      gap: 8px;
-    }
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
 
-    .btn {
-      flex: 1;
-      padding: 10px 0;
-      border: none;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-    }
+.btn {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
 
-    .btn-primary {
-      background-color: #0f766e;
-      color: white;
-    }
+.btn-primary {
+  background-color: #0f766e;
+  color: white;
+}
 
-    .btn-primary:hover {
-      background-color: #0d655e;
-    }
+.btn-primary:hover {
+  background-color: #0d655e;
+}
 
-    .btn-secondary {
-      background-color: #f3f4f6;
-      color: #374151;
-      border: 1px solid #d1d5db;
-    }
+.btn-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
 
-    .btn-secondary:hover {
-      background-color: #e5e7eb;
-    }
+.btn-secondary:hover {
+  background-color: #e5e7eb;
+}
