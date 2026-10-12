@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BelarusSights — Достопримечательности Беларуси</title>
 
-  <!-- 1. Стили Leaflet (обязательно ДО style.css) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Липкая шапка: логотип, поиск, фильтры -->
+  
   <header>
-    <div class="logo">BelarusSights</div>
+    <a href="#" class="logo-link">
+  <img src="logo.png" class="logo-img">
+</a>
 
     <div class="search-box">
       <input type="text" id="search-input" placeholder="Поиск достопримечательностей...">
@@ -35,22 +36,22 @@
         <option value="Замки">Замки и дворцы</option>
         <option value="Храмы">Храмы и костелы</option>
         <option value="Природа">Природа</option>
+        <option value="Архитектура">Архитектура</option>
       </select>
     </div>
   </header>
 
-  <!-- Блок карты на всю ширину -->
+  
   <div id="map-container">
     <div id="map"></div>
   </div>
 
-  <!-- Каталог карточек -->
   <section id="catalog-container">
     <h2 class="catalog-title">Достопримечательности</h2>
     <div class="grid" id="grid"></div>
   </section>
 
-  <!-- Скрипты -->
+  
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="data.js"></script>
   <script src="map.js"></script>

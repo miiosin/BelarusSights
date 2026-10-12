@@ -1,11 +1,8 @@
-// script.js
 
-// script.js
 const grid = document.getElementById('grid');
 const regionFilter = document.getElementById('region-filter');
 const categoryFilter = document.getElementById('category-filter');
 
-// 1. Отрисовка карточек мест
 function renderCards(places) {
   grid.innerHTML = '';
 
@@ -36,7 +33,6 @@ function renderCards(places) {
   });
 }
 
-// 2. Логика применения фильтров
 function applyFilters() {
   const selectedRegion = regionFilter ? regionFilter.value : 'all';
   const selectedCategory = categoryFilter ? categoryFilter.value : 'all';
