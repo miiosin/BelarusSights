@@ -201,3 +201,43 @@ header {
 .btn-secondary:hover {
   background-color: #e5e7eb;
 }
+
+/* Адаптивность шапки для мобильных устройств */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Выстраиваем элементы шапки вертикально */
+    align-items: stretch;   /* Растягиваем их на всю ширину контейнера */
+    gap: 12px;
+    padding: 12px;
+    margin: 8px;
+    max-width: 100%;
+  }
+
+  .logo-link {
+    justify-content: center; /* Центрируем логотип */
+  }
+
+  .logo-img {
+    transform: scale(1.3); /* Чуть уменьшаем масштаб логотипа под мобильный экран */
+    transform-origin: center;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%; /* Поиск во всю ширину */
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column; /* Фильтры ставим друг под другом */
+    gap: 8px;
+    width: 100%;
+  }
+
+  .filters select {
+    width: 100%; /* Выпадающие списки во всю ширину */
+  }
+}
