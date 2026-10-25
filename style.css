@@ -5,7 +5,6 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-
 html, body {
   min-height: 100vh;
   background-color: #f4f6f8;
@@ -14,11 +13,9 @@ html, body {
   overflow-y: auto;
 }
 
-
 header {
   position: sticky;
   top: 12px;
-  /* Убираем жесткий max-width и задаем отступы по бокам для всех экранов */
   width: auto;
   margin: 12px 14px;
   background-color: #1b534b; /* Темно-изумрудный фон */
@@ -41,8 +38,8 @@ header {
 }
 
 .logo-img {
-  height: 48px;          /* Увеличили размер логотипа */
-  width: auto;           /* Сохранение пропорций */
+  height: 55px;          /* Крупный логотип для десктопа */
+  width: auto;           
   display: block;
   transform: none;       
 }
@@ -217,9 +214,9 @@ header {
   }
 
   .logo-img {
-    height: 48px !important; /* Крупный и четкий логотип */
+    height: 72px !important;          /* Большой, четкий и заметный логотип */
     width: auto !important;
-    max-height: 48px;
+    max-height: 72px !important;      /* Сняли старое ограничение */
     transform: none !important;
   }
 
