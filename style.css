@@ -18,11 +18,12 @@ html, body {
 header {
   position: sticky;
   top: 12px;
-  max-width: 1450px;
-  margin: 12px auto;
+  /* Убираем жесткий max-width и задаем отступы по бокам для всех экранов */
+  width: auto;
+  margin: 12px 14px;
   background-color: #1b534b; /* Темно-изумрудный фон */
   border-radius: 12px;
-  padding: 8px 16px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,6 +31,7 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: none;
+  box-sizing: border-box;
 }
 
 .logo-link {
