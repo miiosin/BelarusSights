@@ -202,17 +202,20 @@ header {
   background-color: #e5e7eb;
 }
 
-/* Финальная адаптивная шапка для мобильных и промежуточных экранов */
+/* Финальные отступы и адаптивность шапки */
 @media (max-width: 900px) {
   header {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
     padding: 12px 16px;
-    /* Гарантированные отступы по бокам, чтобы блок не прижимало к краям экрана */
-    margin: 10px 12px;
-    width: auto;
-    max-width: none;
+    
+    /* Жестко задаем отступы по бокам и перебиваем десктопные ограничения */
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    width: auto !important;
+    max-width: calc(100% - 24px) !important;
+    
     border-radius: 12px;
     box-sizing: border-box;
   }
@@ -222,7 +225,6 @@ header {
     width: 100%;
   }
 
-  /* Фиксируем комфортный размер логотипа, исключая любые наезды и микро-масштабы */
   .logo-img {
     height: 36px !important;
     width: auto !important;
@@ -241,7 +243,6 @@ header {
     box-sizing: border-box;
   }
 
-  /* Блок фильтров аккуратно в один ряд */
   .filters {
     display: flex;
     flex-direction: row;
