@@ -16,7 +16,9 @@ html, body {
 header {
   position: sticky;
   top: 12px;
-  margin: 12px 14px;
+  width: calc(100% - 48px);   /* по 24px по бокам, как у каталога */
+  max-width: 1152px;          /* 1200 − 2×24 = ширина карточек */
+  margin: 12px auto;          /* по центру */
   background-color: #1b534b;
   border-radius: 12px;
   padding: 6px 16px;          /* было 12px */
