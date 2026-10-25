@@ -130,7 +130,7 @@ const placesData = [
     lng: 25.3028,
     desc: "Мощная средневековая каменная крепость-кастель, заложенная великим князем Гедимином в 1323 году.",
     image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Belarus_Lida_Castle_%28256497035%29.jpeg/960px-Belarus_Lida_Castle_%28256497035%29.jpeg",
-    link: "https://lixamus.by/"
+    link: "https://lida.museum.by/"
   },
   {
     id: "khatyn_memorial",
@@ -174,7 +174,7 @@ const placesData = [
     lng: 30.3308,
     desc: "Воссозданный архитектурный символ Могилёва эпохи Магдебургского права с 47-метровой башней.",
     image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/City_Hall%2C_Mahilo%C5%AD.jpg/960px-City_Hall%2C_Mahilo%C5%AD.jpg",
-    link: "https://museummogilev.by/"
+    link: "https://mogilevmuseum.by/"
   },
   {
     id: "red_church_minsk",
@@ -185,6 +185,6 @@ const placesData = [
     lng: 27.5475,
     desc: "Знаменитый неоготический костёл святых Симеона и Елены из красного кирпича на площади Независимости.",
     image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/%D0%9A%D0%BE%D1%81%D1%82%D0%B5%D0%BB_%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%B0_%D0%B8_%D0%90%D0%BB%D0%B5%D0%BD%D1%8B_3.jpg/960px-%D0%9A%D0%BE%D1%81%D1%82%D0%B5%D0%BB_%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%B0_%D0%B8_%D0%90%D0%BB%D0%B5%D0%BD%D1%8B_3.jpg",
-    link: "https://minsk-old-new.com/"
+    link: "https://planetabelarus.by/sights/krasnyy-kostel-v-minske/"
   }
 ];
