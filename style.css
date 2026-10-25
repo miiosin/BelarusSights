@@ -216,7 +216,7 @@ header {
     width: 100%;
   }
 
-.logo-img {
+  .logo-img {
     height: 48px !important; /* Крупный и четкий логотип */
     width: auto !important;
     max-height: 48px;
