@@ -85,7 +85,7 @@ const placesData = [
     lat: 55.4864,
     lng: 28.7585,
     desc: "Древнейший храм Беларуси, возведенный в XI веке и перестроенный в стиле виленского барокко.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Modern_photos_of_Cathedral_of_Saint_Sophia_in_Polotsk.jpg/960px-Modern_photos_of_Cathedral_of_Saint_Sophia_in_Polotsk.jpg",
+    image: "https://i.ibb.co/RGMSs1BS/IMG-2696.webp",
     link: "https://polotsk.museum.by/"
   },
   {
@@ -96,7 +96,7 @@ const placesData = [
     lat: 52.4231,
     lng: 31.0164,
     desc: "Главная достопримечательность Гомеля — памятник архитектуры классицизма на живописном берегу Сожа.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/%D0%9F%D0%B0%D0%BB%D0%B0%D1%86%D0%B0%D0%B2%D0%B0-%D0%BF%D0%B0%D1%80%D0%BA%D0%B0%D0%B2%D1%8B_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D1%9E_%D0%93%D0%BE%D0%BC%D0%B5%D0%BB%D1%96._%D0%A4%D0%B0%D1%81%D0%B0%D0%B4_%D0%BF%D0%B0%D0%BB%D0%B0%D1%86%D0%B0.jpg/960px-%D0%9F%D0%B0%D0%BB%D0%B0%D1%86%D0%B0%D0%B2%D0%B0-%D0%BF%D0%B0%D1%80%D0%BA%D0%B0%D0%B2%D1%8B_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D1%9E_%D0%93%D0%BE%D0%BC%D0%B5%D0%BB%D1%96._%D0%A4%D0%B0%D1%81%D0%B0%D0%B4_%D0%BF%D0%B0%D0%BB%D0%B0%D1%86%D0%B0.jpg",
+    image: "https://i.ibb.co/svc5tKHG/IMG-2694.jpg",
     link: "https://palacegomel.by/"
   },
   {
@@ -107,7 +107,7 @@ const placesData = [
     lat: 55.6425,
     lng: 27.0311,
     desc: "Уникальный природный озёрный край Беларуси с живописными ледниковыми ландшафтами.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Naviata_Lake_in_Brasla%C5%AD_-_panoramio.jpg/960px-Naviata_Lake_in_Brasla%C5%AD_-_panoramio.jpg",
+    image: "https://i.ibb.co/35L063H1/IMG-2695.jpg",
     link: "https://braslavpark.by/"
   },
   {
@@ -151,7 +151,7 @@ const placesData = [
     lat: 52.8608,
     lng: 24.8961,
     desc: "Грандиозная резиденция влиятельнейшего рода Сапег, некогда именовавшаяся «Белорусским Версалем».",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/%D0%A0%D1%83%D0%B6%D0%B0%D0%BD%D1%8B_Ru%C5%BEany_%282021%29_03.jpg/960px-%D0%A0%D1%83%D0%B6%D0%B0%D0%BD%D1%8B_Ru%C5%BEany_%282021%29_03.jpg",
+    image: "https://i.ibb.co/rf7zjvrF/IMG-2697.webp",
     link: "https://ruzhany.museum.by/"
   },
   {
@@ -184,7 +184,18 @@ const placesData = [
     lat: 53.8965,
     lng: 27.5475,
     desc: "Знаменитый неоготический костёл святых Симеона и Елены из красного кирпича на площади Независимости.",
-    image: "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/%D0%9A%D0%BE%D1%81%D1%82%D0%B5%D0%BB_%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%B0_%D0%B8_%D0%90%D0%BB%D0%B5%D0%BD%D1%8B_3.jpg/960px-%D0%9A%D0%BE%D1%81%D1%82%D0%B5%D0%BB_%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%B0_%D0%B8_%D0%90%D0%BB%D0%B5%D0%BD%D1%8B_3.jpg",
+    image: "https://i.ibb.co/wZSKvv6V/IMG-2698.jpg",
     link: "https://msj.by/katolicheskie-xramy/krasnyj-kostel-v-minske/"
+  },
+  {
+    id: "kossovo_castle",
+    title: "Коссовский замок",
+    region: "Брестская",
+    category: "Замки",
+    lat: 52.7656,
+    lng: 25.1228,
+    desc: "Романтический неоготический дворец Пусловских, увенчанный 12 гранеными башнями.",
+    image: "https://i.ibb.co/hRZxW6Dn/IMG-2693.webp",
+    link: "https://zamok-kossovo.by/"
   }
 ];
