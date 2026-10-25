@@ -38,7 +38,7 @@ header {
 }
 
 .logo-img {
-  height: 55px;          /* Крупный логотип для десктопа */
+  height: 80px;          /* Большой и заметный логотип */
   width: auto;           
   display: block;
   transform: none;       
@@ -213,10 +213,10 @@ header {
     width: 100%;
   }
 
-  .logo-img {
-    height: 72px !important;          /* Большой, четкий и заметный логотип */
+.logo-img {
+    height: 80px !important;          
     width: auto !important;
-    max-height: 72px !important;      /* Сняли старое ограничение */
+    max-height: 80px !important;      
     transform: none !important;
   }
 
