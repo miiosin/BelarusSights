@@ -1,7 +1,7 @@
-
 const grid = document.getElementById('grid');
 const regionFilter = document.getElementById('region-filter');
 const categoryFilter = document.getElementById('category-filter');
+const searchInput = document.getElementById('search-input');
 
 function renderCards(places) {
   grid.innerHTML = '';
@@ -36,11 +36,18 @@ function renderCards(places) {
 function applyFilters() {
   const selectedRegion = regionFilter ? regionFilter.value : 'all';
   const selectedCategory = categoryFilter ? categoryFilter.value : 'all';
+  const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
 
   const filteredPlaces = placesData.filter(place => {
     const matchRegion = (selectedRegion === 'all' || place.region === selectedRegion);
     const matchCategory = (selectedCategory === 'all' || place.category === selectedCategory);
-    return matchRegion && matchCategory;
+    const matchSearch = !query ||
+      place.title.toLowerCase().includes(query) ||
+      place.desc.toLowerCase().includes(query) ||
+      place.region.toLowerCase().includes(query) ||
+      place.category.toLowerCase().includes(query);
+
+    return matchRegion && matchCategory && matchSearch;
   });
 
   renderCards(filteredPlaces);
@@ -49,6 +56,7 @@ function applyFilters() {
 
 if (regionFilter) regionFilter.addEventListener('change', applyFilters);
 if (categoryFilter) categoryFilter.addEventListener('change', applyFilters);
+if (searchInput) searchInput.addEventListener('input', applyFilters);
 
 renderCards(placesData);
 renderMarkers(placesData);
