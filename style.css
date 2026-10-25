@@ -209,7 +209,7 @@ header {
   }
 
   .logo-link {
-    justify-content: flex-start;
+    justify-content: center;   /* было flex-start */
     width: 100%;
   }
 
