@@ -38,8 +38,8 @@ header {
 }
 
 .logo-img {
-  height: 80px;          /* Большой и заметный логотип */
-  width: auto;           
+  height: 80px;          /* Увеличиваем высоту логотипа для десктопа */
+  width: auto;           /* Сохраняем пропорции */
   display: block;
   transform: none;       
 }
@@ -213,8 +213,8 @@ header {
     width: 100%;
   }
 
-.logo-img {
-    height: 80px !important;          
+  .logo-img {
+    height: 80px !important;          /* Большой и четкий логотип на мобильных */
     width: auto !important;
     max-height: 80px !important;      
     transform: none !important;
