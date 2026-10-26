@@ -197,5 +197,54 @@ const placesData = [
     desc: "Романтический неоготический дворец Пусловских, увенчанный 12 гранеными башнями.",
     image: "https://i.ibb.co/hRZxW6Dn/IMG-2693.webp",
     link: "https://zamok-kossovo.by/"
+  },
+
+ {
+    id: "augustow_canal",
+    title: "Августовский канал",
+    region: "Гродненская",
+    category: "Природа",
+    lat: 53.8500,
+    lng: 23.6500,
+    desc: "Исторический судоходный канал XIX века с системой шлюзов, окружённый живописными лесами и водоёмами.",
+    image: "https://i.postimg.cc/RVJ959K1/IMG-1697.jpg",
+    link: "https://trofei.by/articles/stati-o-turizme/otdyh-na-avgustovskom-kanale"
+  },
+
+  {
+    id: "hrodna_old_castle",
+    title: "Гродненский Старый замок",
+    region: "Гродненская",
+    category: "Замки",
+    lat: 53.6784,
+    lng: 23.8258,
+    desc: "Историческая королевская резиденция на берегу Немана, связанная с историей Великого княжества Литовского.",
+    image: "https://i.postimg.cc/jjcYQjYK/IMG-1698.jpg",
+    link: "https://grodno-oldcastle.museum.by/"
+  },
+
+  {
+    id: "st_francis_xavier_church",
+    title: "Костёл Святого Франциска Ксаверия",
+    region: "Гродненская",
+    category: "Храмы",
+    lat: 53.6787,
+    lng: 23.8295,
+    desc: "Знаменитый барочный костёл XVII века в Гродно, известный богатым внутренним убранством и историческими часами.",
+    image: "https://i.postimg.cc/P5nggDtC/IMG-1699.jpg",
+    link: "https://katedra-grodno.by/"
+  },
+
+  {
+    id: "strochitsy_museum",
+    title: "Музей народной архитектуры и быта в Строчицах",
+    region: "Минская",
+    category: "Музеи",
+    lat: 53.8400,
+    lng: 27.4500,
+    desc: "Музей под открытым небом, знакомящий с традиционным бытом белорусов, деревянными постройками, мельницами и старинными храмами.",
+    image: "https://i.postimg.cc/T2z2PpdR/IMG-1700.webp",
+    link: "https://ru.etna.by/"
   }
+  
 ];
