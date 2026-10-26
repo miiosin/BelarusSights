@@ -245,6 +245,60 @@ const placesData = [
     desc: "Музей под открытым небом, знакомящий с традиционным бытом белорусов, деревянными постройками, мельницами и старинными храмами.",
     image: "https://i.postimg.cc/T2z2PpdR/IMG-1700.webp",
     link: "https://ru.etna.by/"
+  },
+  {
+    id: "kamenets_tower",
+    title: "Каменецкая башня",
+    region: "Брестская",
+    category: "Замки",
+    lat: 52.4042,
+    lng: 23.8119,
+    desc: "Уникальный памятник волынского оборонительного зодчества конца XIII века.",
+    image: "https://i.postimg.cc/5NNXvWfm/IMG-2699.jpg",
+    link: "https://brokm.by/vezha/"
+  },
+  {
+    id: "mogilev_nicolas_monastery",
+    title: "Никольский монастырь в Могилеве",
+    region: "Могилевская",
+    category: "Храмы",
+    lat: 53.8889,
+    lng: 30.3444,
+    desc: "Выдающийся памятник белорусского барокко XVII века с уникальным резным иконостасом.",
+    image: "https://i.postimg.cc/QNn362p5/IMG-2700.jpg",
+    link: "https://monasterium.ru/monastyri/monastery/svyato-nikolskiy-zhenskiy-monastyr-g-mogilev-mogilevskoy-eparkhii/"
+  },
+ {
+    id: "naroch_park",
+    title: "Национальный парк «Нарочанский»",
+    region: "Минская",
+    category: "Природа",
+    lat: 54.8500,
+    lng: 26.7000,
+    desc: "Крупнейший природоохранный комплекс с живописными озёрами, сосновыми борами и курортной зоной.",
+    image: "https://i.postimg.cc/nct6wnXS/IMG-2701.jpg",
+    link: "https://narochpark.by/o-nas/"
+  },
+  {
+    id: "dudutki",
+    title: "Музейный комплекс «Дудутки»",
+    region: "Минская",
+    category: "Усадьбы",
+    lat: 53.5936,
+    lng: 27.6831,
+    desc: "Популярный интерактивный музей старинных народных ремесел и технологий.",
+    image: "https://i.postimg.cc/rszzB5n3/IMG-2702.jpg",
+    link: "https://dudutki.by/"
+  },
+  {
+    id: "synkovichy_church",
+    title: "Церковь в Сынковичах",
+    region: "Гродненская",
+    category: "Храмы",
+    lat: 53.0769,
+    lng: 24.9781,
+    desc: "Одна из старейших оборонительных церквей восточнославянского региона начала XVI века.",
+    image: "https://i.postimg.cc/CMWf3Q0C/IMG-2703.jpg",
+    link: "https://orthos.org/cvyatyni/khram-arkhangela-mikhaila-v-synkovichakh/"
   }
-  
 ];
