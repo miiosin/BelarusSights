@@ -52,6 +52,65 @@
     <div class="grid" id="grid"></div>
   </section>
 
+  <!-- Футер сайта -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col footer-about">
+        <a href="#" class="footer-logo-link">
+          <img src="logo.png" alt="BelarusSights" class="footer-logo">
+        </a>
+        <p class="footer-desc">Интерактивный путеводитель по достопримечательностям Беларуси. Открывайте замки, старинные храмы, дворцовые усадьбы и живописную природу родного края.</p>
+      </div>
+
+      <div class="footer-col footer-nav">
+        <h4 class="footer-title">Категории</h4>
+        <ul class="footer-links footer-links-grid">
+          <li><a href="#catalog-container" onclick="filterByCategory('Замки')">Замки и дворцы</a></li>
+          <li><a href="#catalog-container" onclick="filterByCategory('Архитектура')">Архитектура</a></li>
+          <li><a href="#catalog-container" onclick="filterByCategory('Храмы')">Храмы и костёлы</a></li>
+          <li><a href="#catalog-container" onclick="filterByCategory('Усадьбы')">Усадьбы</a></li>
+          <li><a href="#catalog-container" onclick="filterByCategory('Природа')">Природа и парки</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-info">
+        <h4 class="footer-title">Навигация</h4>
+        <ul class="footer-links">
+          <li><a href="#map-container">Интерактивная карта</a></li>
+          <li><a href="#catalog-container">Каталог мест</a></li>
+        </ul>
+        <div class="footer-badge">Беларусь • Открывай с нами</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>© 2026 BelarusSights. Все права защищены.</p>
+        <p class="footer-subtext">Сделано с любовью к Беларуси</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Всплывающее окно с информацией о достопримечательности -->
+  <div id="place-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-window" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close-btn" aria-label="Закрыть">&times;</button>
+      <div class="modal-image-wrapper">
+        <img id="modal-img" src="" alt="" class="modal-img">
+      </div>
+      <div class="modal-content">
+        <h3 id="modal-title" class="modal-title"></h3>
+        <div id="modal-tags" class="modal-tags"></div>
+        <p id="modal-desc" class="modal-desc"></p>
+        <div id="modal-details" class="modal-details"></div>
+        <div class="modal-actions">
+          <a id="modal-site-btn" href="#" target="_blank" class="modal-btn">Официальный сайт</a>
+          <a id="modal-route-btn" href="#" target="_blank" class="modal-btn">Проложить маршрут</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="data.js"></script>

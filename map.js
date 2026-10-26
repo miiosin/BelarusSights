@@ -45,17 +45,19 @@ function renderMarkers(places) {
         <p style="margin: 0 0 8px; font-size: 12px; color: #6b7280;">
           ${place.category} • ${place.region} обл.
         </p>
-        <a href="${place.link}" target="_blank" style="
+        <button onclick="openModal('${place.id}')" style="
           display: block;
+          width: 100%;
+          border: none;
           text-align: center;
           background-color: #1b534b;
           color: #ffffff;
           padding: 6px 0;
           border-radius: 6px;
           font-size: 12px;
-          text-decoration: none;
+          cursor: pointer;
           font-weight: 600;
-        ">Подробнее</a>
+        ">Подробнее</button>
       </div>
     `);
     markersGroup.addLayer(marker);
