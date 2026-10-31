@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О проекте — BelarusSights</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-main">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" class="logo-img" alt="BelarusSights">
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="routes.html" class="nav-link">Маршруты</a>
+        <a href="guide.html" class="nav-link">Советы</a>
+        <a href="about.html" class="nav-link active">О проекте</a>
+      </nav>
+    </div>
+
+    <div class="header-controls">
+      <a href="index.html?random=1" class="btn-lucky" title="Случайная достопримечательность">
+        <span class="lucky-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 8h.01"></path><path d="M8 8h.01"></path><path d="M8 16h.01"></path><path d="M16 16h.01"></path><path d="M12 12h.01"></path></svg></span> Мне повезёт!
+      </a>
+      <a href="index.html#map-container" class="btn btn-primary" style="padding: 8px 14px; text-decoration: none; border-radius: 8px; font-size: 13px;">
+        На карту
+      </a>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <div class="page-hero">
+      <h1>О проекте BelarusSights</h1>
+      <p>Интерактивная цифровая карта и путеводитель по культурному, архитектурному и природному наследию Беларуси. Мы создали платформу, которая помогает открывать страну по-новому.</p>
+    </div>
+
+    <!-- Статистика -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">18</div>
+        <div class="stat-label">Проверенных локаций</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Областей Беларуси</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Категорий наследия</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Открытый доступ</div>
+      </div>
+    </div>
+
+    <!-- Миссия и описание -->
+    <article class="about-content-card">
+      <h2>Наша миссия</h2>
+      <p>Беларусь обладает богатейшей историей на перекрестке европейских цивилизаций: здесь сохранились готические и ренессансные замки, величественные барочные храмы, романтические неоготические усадьбы и реликтовые первобытные леса.</p>
+      <p>Цель проекта <strong>BelarusSights</strong> — предоставить путешественникам простой, удобный и визуально привлекательный инструмент для планирования поездок: от интерактивной карты с реальными GPS-координатами до подробной информации о ценах на билеты, часах работы и готовых маршрутах.</p>
+      <p>Все объекты сопровождаются проверенными ссылками на официальные музейные ресурсы, прямыми ссылками для построения автомаршрутов и качественными фотографиями.</p>
+    </article>
+  </main>
+
+  <!-- Футер сайта -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col footer-about">
+        <a href="index.html" class="footer-logo-link">
+          <img src="logo.png" alt="BelarusSights" class="footer-logo">
+        </a>
+        <p class="footer-desc">Интерактивный путеводитель по достопримечательностям Беларуси. Открывайте замки, старинные храмы, дворцовые усадьбы и живописную природу родного края.</p>
+      </div>
+
+      <div class="footer-col footer-nav">
+        <h4 class="footer-title">Категории</h4>
+        <ul class="footer-links footer-links-grid">
+          <li><a href="index.html#catalog-container">Замки и дворцы</a></li>
+          <li><a href="index.html#catalog-container">Архитектура</a></li>
+          <li><a href="index.html#catalog-container">Храмы и костёлы</a></li>
+          <li><a href="index.html#catalog-container">Усадьбы</a></li>
+          <li><a href="index.html#catalog-container">Природа и парки</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-info">
+        <h4 class="footer-title">Навигация</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#map-container">Интерактивная карта</a></li>
+          <li><a href="index.html#catalog-container">Каталог мест</a></li>
+          <li><a href="routes.html">Готовые маршруты</a></li>
+          <li><a href="guide.html">Памятка туристу</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+        <div class="footer-badge">Беларусь • Открывай с нами</div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>© 2026 BelarusSights. Все права защищены.</p>
+        <p class="footer-subtext">Сделано с любовью к Беларуси</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>

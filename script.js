@@ -33,12 +33,14 @@ function renderCards(places) {
   });
 }
 
+let currentFilteredPlaces = placesData;
+
 function applyFilters() {
   const selectedRegion = regionFilter ? regionFilter.value : 'all';
   const selectedCategory = categoryFilter ? categoryFilter.value : 'all';
   const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
 
-  const filteredPlaces = placesData.filter(place => {
+  currentFilteredPlaces = placesData.filter(place => {
     const matchRegion = (selectedRegion === 'all' || place.region === selectedRegion);
     const matchCategory = (selectedCategory === 'all' || place.category === selectedCategory);
     const matchSearch = !query ||
@@ -50,8 +52,8 @@ function applyFilters() {
     return matchRegion && matchCategory && matchSearch;
   });
 
-  renderCards(filteredPlaces);
-  renderMarkers(filteredPlaces);
+  renderCards(currentFilteredPlaces);
+  renderMarkers(currentFilteredPlaces);
 }
 
 if (regionFilter) regionFilter.addEventListener('change', applyFilters);
@@ -211,3 +213,52 @@ function filterByCategory(category) {
   }
 }
 window.filterByCategory = filterByCategory;
+
+// Кнопка «Мне повезёт!» и случайный выбор
+function triggerLuckySight() {
+  const pool = (currentFilteredPlaces && currentFilteredPlaces.length > 0) ? currentFilteredPlaces : placesData;
+  if (!pool || pool.length === 0) return;
+
+  const randomIndex = Math.floor(Math.random() * pool.length);
+  const luckyPlace = pool[randomIndex];
+
+  if (typeof focusOnMap === 'function') {
+    focusOnMap(luckyPlace.lat, luckyPlace.lng);
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  setTimeout(() => {
+    openModal(luckyPlace.id);
+  }, 450);
+}
+window.triggerLuckySight = triggerLuckySight;
+
+const randomBtn = document.getElementById('random-btn');
+if (randomBtn) {
+  randomBtn.addEventListener('click', triggerLuckySight);
+}
+
+// Мобильное меню навигации
+const menuToggle = document.getElementById('menu-toggle');
+const mainNav = document.getElementById('main-nav');
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+  });
+}
+
+// Автоматический переход по URL-параметрам (?random=1 или ?sight=id)
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('random') === '1') {
+    setTimeout(triggerLuckySight, 550);
+  } else if (params.get('sight')) {
+    const sightId = params.get('sight');
+    const place = placesData.find(p => p.id === sightId);
+    if (place) {
+      if (typeof focusOnMap === 'function') focusOnMap(place.lat, place.lng);
+      setTimeout(() => openModal(sightId), 550);
+    }
+  }
+});
